@@ -1,4 +1,5 @@
 #include "Weather.h";
+#include "UI.h"
 
 Weather::Weather()
 {
@@ -88,25 +89,28 @@ void Weather::display()
 	}
 }
 
-void Weather::AnalyzeData(Weather& city)
+void Weather::AnalyzeData()
 {
 //	cout << "City 1 Forecast:\n\n\n";
 //	this->display();
 //	cout << "City 2 Forecast:\n\n\n";
 //    city.display();
     
-    if(maxTemp >= 60)
-        cout << "You will not need any jacket.";
-    else if (maxTemp < 60 && maxTemp > 40)
-        cout << "You will need a light jakcet.";
-    else
-        cout << "You will need a nice jacket.";
-    
-    string rain = "rain";
-    found=weatherConditions.find("rain");
-    if(found!=std::string::npos)
-        cout << "You will need an umbrella.\n";
-    
+    for(list <WeatherData> ::iterator i = five_day_forecast.begin(); i != five_day_forecast.end();)
+    {
+        if(i->maxTemp >= 60)
+            cout << "You will not need any jacket.";
+        else if (i->maxTemp < 60 && i->maxTemp > 40)
+            cout << "You will need a light jakcet.";
+        else
+            cout << "You will need a nice jacket.";
+        
+        string rain = "rain";
+        found=i->weatherConditions.find("rain");
+        if(found!=std::string::npos)
+            cout << "You will need an umbrella.\n";
+        else;
+    }
 }
 
 //void Weather::battle(Weather& city) 

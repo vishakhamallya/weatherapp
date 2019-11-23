@@ -39,7 +39,7 @@ public:
 	void GetWeatherData(string cityname);
 	void Parse(string json);
 
-	void AnalyzeData(Weather& city);
+	void AnalyzeData();
 
 private:
 	//api.openweathermap.org/data/2.5/forecast?id={cityid}&&APPID=f2cc4ae311506f4fae2685b91b863ef6&units=imperial

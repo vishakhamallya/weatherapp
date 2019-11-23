@@ -57,7 +57,7 @@ int main(int argc, char** argv)
             {
                 Weather LosAngeles;
                 LosAngeles.GetWeatherData("Los Angeles");
-                LosAngles.AnalyzeData;
+                LosAngeles.AnalyzeData;
                 cin.clear();
                 displayMoreMenu();
                 char option2;
@@ -66,7 +66,7 @@ int main(int argc, char** argv)
                 {
                     case 'a':
                     {
-                        LosAngles.display();
+                        LosAngeles.display();
                         cin.clear();
                         displayExit();
                     }
