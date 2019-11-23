@@ -30,7 +30,7 @@ int main(int argc, char** argv)
             {
             	Weather Orlando;
 				Orlando.GetWeatherData("Orlando");
-                Orlando.AnalyzeData;
+                Orlando.AnalyzeData();
                 cin.clear();
                 displayMoreMenu();
                 char option2;
@@ -57,7 +57,7 @@ int main(int argc, char** argv)
             {
                 Weather LosAngeles;
                 LosAngeles.GetWeatherData("Los Angeles");
-                LosAngeles.AnalyzeData;
+                LosAngeles.AnalyzeData();
                 cin.clear();
                 displayMoreMenu();
                 char option2;

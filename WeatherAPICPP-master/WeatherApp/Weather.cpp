@@ -101,13 +101,14 @@ void Weather::AnalyzeData()
         if(i->maxTemp >= 60)
             cout << "You will not need any jacket.";
         else if (i->maxTemp < 60 && i->maxTemp > 40)
-            cout << "You will need a light jakcet.";
+            cout << "You will need a light jacket.";
         else
             cout << "You will need a nice jacket.";
         
         string rain = "rain";
-        found=i->weatherConditions.find("rain");
-        if(found!=std::string::npos)
+//        found=i->weatherConditions.find("rain");
+//        if(found!=std::string::npos)
+        if(i->weatherConditions.find("rain") == true)
             cout << "You will need an umbrella.\n";
         else;
     }
